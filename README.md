@@ -1,45 +1,34 @@
-# landing
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/wordmark-dark.svg">
+    <img src="assets/wordmark-light.svg" alt="patina" width="260">
+  </picture>
+</p>
 
-The landing page of [patina](https://github.com/patina21/patina): the free alternative to
-Windows and macOS for x86-64 and ARM, with its own assistant,
-[kortex](https://github.com/patina21/kortex).
+<h3 align="center">A new OS you can just ask. And it asks you first.</h3>
 
-A static page with no build step and no outside requests: no CDN, no analytics, no
-Google Fonts. Everything it loads is in this repository.
+<p align="center">
+  The free alternative to Windows and macOS, for x86-64 and ARM.<br>
+  A complete desktop with its own assistant, kortex, on Debian and KDE Plasma.
+</p>
 
-```text
-index.html            the page
-assets/site.css       aurora's light palette, the layout, the self-hosted fonts
-assets/site.js        the kortex demo and the contour lines (nothing talks to a server)
-assets/fonts/         Sora, Source Sans 3 and JetBrains Mono (latin, latin-ext), with their OFL licences
-assets/*.svg          the wordmark from patina's branding/export/, light and dark
-assets/*.jpg          the desktop and installer screenshots from patina's docs/screenshots/
-profile/              the README for the patina21 GitHub profile (patina21/patina21)
-```
+<p align="center">
+  <a href="https://github.com/patina-os/patina"><b>patina</b></a> ·
+  <a href="https://github.com/patina-os/kortex"><b>kortex</b></a> ·
+  <a href="https://github.com/patina-os/patina/blob/main/docs/roadmap.md">Roadmap</a> ·
+  <a href="https://github.com/patina-os/patina/releases">Releases</a>
+</p>
 
-## Preview
+<p align="center">
+  <img src="assets/assistant.png" alt="kortex, the patina assistant: asked to make the text a little bigger, it offers to change the system font size to 11 pt and waits for Allow once, Always or Deny" width="636">
+  <br><sub>Windows key and Space, then <code>ai</code> and your request. It runs on your machine and asks before every change.</sub>
+</p>
 
-```sh
-python3 -m http.server 8000    # then open http://localhost:8000
-```
+<p align="center">
+  <img src="https://raw.githubusercontent.com/patina-os/patina/main/docs/screenshots/desktop-amd64.png" alt="The patina desktop: a centred taskbar and one terminal window over a colourful wallpaper">
+  <br><sub>A fresh install, in dark mode. Alpha on Debian 13; the installer image is next.</sub>
+</p>
 
-Opening `index.html` directly works too, but browsers block the font preloads on
-`file://`, so the console shows harmless errors there.
-
-## Publish
-
-GitHub Pages serves it as is: Settings → Pages → deploy from the default branch, root
-folder.
-
-## Keeping it in step with patina
-
-- The colours are aurora's light palette (`themes/aurora/theme.yaml`, the `light:` block).
-- The wordmark is `branding/export/wordmark-blocks.svg`; `wordmark-light.svg` is the same
-  drawing with the letters in aurora light's ink. Copy them again when patina's change.
-- The screenshots are CI's, scaled to 1600 and 1400 px as JPEG; refresh them per release.
-- The ArtCraft apps are the ones listed at [craftingapps.org](https://craftingapps.org).
-
-## Licence
-
-GPL-3.0-or-later, like patina. The fonts are under the SIL Open Font License 1.1
-(`assets/fonts/OFL-*.txt`).
+<p align="center"><sub>Free software, GPL-3.0-or-later. Based on Debian, with KDE Plasma. Debian is a
+trademark of Software in the Public Interest, Inc.; KDE and Plasma are trademarks of KDE
+e.V. Not affiliated.</sub></p>
