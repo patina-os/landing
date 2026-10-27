@@ -172,7 +172,10 @@ img { display: block; max-width: 100%; height: auto; }
 code, .mono { font-family: var(--f-mono); }
 
 /* ---------- the wordmark: branding/export/wordmark-blocks.svg from patina ---------- */
-.wm-nav { width: clamp(161px, 19.5vw, 218px); }
+.wm-nav { width: clamp(161px, 19.5vw, 218px); position: relative; z-index: 1; }
+/* pixel rings spreading from the wordmark's ▲ (left 56.9%, top 5.75% of its drawing) */
+.wm-wrap { position: relative; display: inline-block; line-height: 0; }
+#wm-rings { position: absolute; width: 480px; height: 380px; left: calc(56.9% - 240px); top: calc(5.75% - 190px); z-index: 0; pointer-events: none; image-rendering: pixelated; }
 .wm-big { width: clamp(170px, 22vw, 260px); }
 .a-cta-side { display: flex; flex-direction: column; gap: 28px; align-items: flex-start; }
 

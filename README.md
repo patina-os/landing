@@ -10,7 +10,7 @@ Google Fonts. Everything it loads is in this repository.
 ```text
 index.html            the page
 assets/site.css       aurora's light palette, the layout, the self-hosted fonts
-assets/site.js        the kortex demo and the contour lines (nothing talks to a server)
+assets/site.js        the kortex demo, the contour lines and the rings around the wordmark (nothing talks to a server)
 assets/fonts/         Sora, Source Sans 3 and JetBrains Mono (latin, latin-ext), with their OFL licences
 assets/*.svg          the wordmark from patina's branding/export/, light and dark
 assets/*.jpg          the desktop and installer screenshots from patina's docs/screenshots/

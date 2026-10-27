@@ -93,6 +93,60 @@
     }
     return true;
   }
+  /* pixel rings from the wordmark's ▲: square cells on a grid like the wordmark's blocks,
+     a new ring every few seconds, each spreading and fading; stepped at ~12 frames a second
+     for the pixel feel, still when the visitor prefers reduced motion */
+  (function () {
+    var c = document.getElementById('wm-rings');
+    if (!c) return;
+    var ctx = c.getContext('2d');
+    var CELL = 3, W = 480, H = 380, CX = W / 2, CY = H / 2;
+    var EVERY = 2600, LIFE = 8400, REACH = 195;
+    var still = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var dpr = Math.min(window.devicePixelRatio || 1, 2);
+    c.width = W * dpr; c.height = H * dpr;
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    var cells = [];
+    for (var y = 0; y < H; y += CELL) {
+      for (var x = 0; x < W; x += CELL) {
+        var dx = x + CELL / 2 - CX, dy = (y + CELL / 2 - CY) / 0.82;
+        cells.push([x, y, Math.sqrt(dx * dx + dy * dy), Math.atan2(dy, dx)]);
+      }
+    }
+    function shape(a, k) {
+      return 1 + 0.06 * Math.sin(3 * a + k * 1.7) + 0.04 * Math.sin(5 * a - k) + 0.025 * Math.sin(8 * a + k * 0.6);
+    }
+    function frame(now) {
+      ctx.clearRect(0, 0, W, H);
+      var first = Math.floor((now - LIFE) / EVERY) + 1, last = Math.floor(now / EVERY);
+      for (var k = first; k <= last; k++) {
+        var t = (now - k * EVERY) / LIFE;
+        if (t < 0 || t > 1) continue;
+        var r = 8 + REACH * Math.pow(t, 0.8);
+        var alpha = 0.34 * Math.min(1, t * 8) * Math.pow(1 - t, 1.6);
+        ctx.fillStyle = t < 0.35 ? '#7c3aed' : '#9b6bff';
+        ctx.globalAlpha = alpha;
+        for (var i = 0; i < cells.length; i++) {
+          var cl = cells[i];
+          if (Math.abs(cl[2] - r * shape(cl[3], k)) < CELL * 0.62) ctx.fillRect(cl[0], cl[1], CELL - 0.5, CELL - 0.5);
+        }
+      }
+      ctx.globalAlpha = 1;
+    }
+    if (still) { frame(EVERY * 3 + 2200); return; }
+    var on = true, running = false, lastDraw = 0, start = performance.now();
+    function kick() { if (on && !running) { running = true; requestAnimationFrame(loop); } }
+    function loop(ts) {
+      if (!on) { running = false; return; }
+      if (ts - lastDraw > 80) { frame(ts - start + LIFE); lastDraw = ts; }
+      requestAnimationFrame(loop);
+    }
+    if ('IntersectionObserver' in window) {
+      new IntersectionObserver(function (e) { on = e[0].isIntersecting; kick(); }).observe(c);
+    }
+    kick();
+  })();
+
   var specs = {
     'a-contour': { cx: .6, cy: .45, reach: .5, rings: 22, inner: '#7c3aed', outer: '#c3a2ff', thin: 1.1, bold: 1.8, alpha: function (t) { return .35 + (1 - t) * .6; }, peak: 11, peakColor: '#087a46' },
     'a-cta-contour': { cx: .9, cy: .15, reach: .7, rings: 26, inner: '#3cff9d', outer: '#6d4fc2', thin: 1, bold: 1.5, alpha: function (t) { return .2 + (1 - t) * .5; }, peak: 0 }
