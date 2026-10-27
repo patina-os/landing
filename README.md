@@ -14,7 +14,7 @@ assets/site.js        the kortex demo and the contour lines (nothing talks to a 
 assets/fonts/         Sora, Source Sans 3 and JetBrains Mono (latin, latin-ext), with their OFL licences
 assets/*.svg          the wordmark from patina's branding/export/, light and dark
 assets/*.jpg          the desktop and installer screenshots from patina's docs/screenshots/
-profile/              the README for the patina21 GitHub profile, uploaded by hand
+profile/              the README for the patina21 GitHub profile (patina21/patina21)
 ```
 
 ## Preview
