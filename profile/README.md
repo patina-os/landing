@@ -9,7 +9,7 @@
 
 <p align="center">
   The free alternative to Windows and macOS, for x86-64 and ARM.<br>
-  A complete desktop with an assistant built in, on Debian and KDE Plasma.
+  A complete desktop with its own assistant, kortex, on Debian and KDE Plasma.
 </p>
 
 <p align="center">
@@ -27,12 +27,12 @@
 </p>
 
 <p align="center">
-  <img src="assets/assistant.png" alt="The patina assistant: asked to make the text a little bigger, it offers to change the system font size to 11 pt and waits for Allow once, Always or Deny" width="636">
+  <img src="assets/assistant.png" alt="kortex, the patina assistant: asked to make the text a little bigger, it offers to change the system font size to 11 pt and waits for Allow once, Always or Deny" width="636">
 </p>
 
-## The assistant
+## Meet kortex
 
-Press the Windows key and Space, then type `ai` and your request.
+kortex is patina's assistant. Press the Windows key and Space, then type `ai` and your request.
 
 - **Runs on your machine.** What you ask never leaves it, and it works offline.
 - **Shows before it changes.** Every change waits for you: Allow once, Always, or Deny.
@@ -81,7 +81,7 @@ Star it if you want this to exist.
 | | |
 |---|---|
 | [**patina**](https://github.com/patina21/patina) | the OS: the look, the apps, the settings and the assistant's setup |
-| [**kortex**](https://github.com/patina21/kortex) | the assistant in the command palette |
+| [**kortex**](https://github.com/patina21/kortex) | kortex, the assistant in the command palette |
 
 Every line is public and GPL. patina builds on what Debian and KDE do well, and adds
 nothing that needs its own security team. Themes and fixes are welcome.
