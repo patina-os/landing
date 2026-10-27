@@ -27,8 +27,9 @@ Opening `index.html` directly works too, but browsers block the font preloads on
 
 ## Publish
 
-GitHub Pages serves it as is: Settings → Pages → deploy from `main`, root folder. It is
-then at https://patina-os.github.io/landing/.
+`.github/workflows/pages.yml` publishes `main` to GitHub Pages on every push, as is. Once,
+in Settings → Pages, set Source to "GitHub Actions". The site is at
+https://patina-os.github.io/landing/.
 
 ## Keeping it in step with patina
 
