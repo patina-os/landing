@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>patina · a new OS you can just ask</title>
+<meta name="description" content="patina is the free alternative to Windows and macOS for x86-64 and ARM: a complete desktop with its own assistant, kortex, on Debian and KDE Plasma.">
+<meta property="og:title" content="patina · a new OS you can just ask">
+<meta property="og:description" content="The free alternative to Windows and macOS, for x86-64 and ARM. With its own assistant, kortex.">
+<meta property="og:image" content="assets/desktop.jpg">
+<meta name="theme-color" content="#f7f6fb">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="assets/fonts/sora-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/source-sans-3-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+<div class="dir dir-a">
+  <div class="wrap">
+    <header class="a-nav" id="top">
+      <a class="a-brand" href="./"><img class="wm-nav" src="assets/wordmark-light.svg" alt="patina" width="290" height="200"></a>
+      <ul>
+        <li><a href="#a-assistant">kortex</a></li>
+        <li><a href="#a-apps">Apps</a></li>
+        <li><a href="#a-values">Values</a></li>
+        <li><a href="#a-status">Status</a></li>
+        <li><a href="https://github.com/patina21/patina" target="_blank" rel="noopener">GitHub</a></li>
+      </ul>
+    </header>
+
+    <section class="a-hero">
+      <div>
+        <p class="a-eyebrow rise">The free alternative to Windows and macOS · for x86-64 and ARM</p>
+        <h1 class="rise d2">A new OS you can just ask. <span>And it asks you first.</span></h1>
+        <p class="a-lede rise d3">A complete, free desktop for PCs and ARM laptops, with its own assistant, kortex. Ask it in plain words. It shows every change first, and it runs on your own computer.</p>
+        <div class="btn-row">
+          <a class="btn a-btn" href="https://github.com/patina21/patina" target="_blank" rel="noopener"><svg viewBox="0 0 16 16" aria-hidden="true" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>Follow on GitHub</a>
+          <a class="btn a-btn-ghost" href="#a-assistant">Meet kortex</a>
+        </div>
+        <div class="a-facts"><span>Alpha</span><span>x86-64 and ARM</span><span>Works offline</span><span>GPL-3.0</span></div>
+      </div>
+      <figure class="a-ask">
+        <canvas id="a-contour" aria-hidden="true"></canvas>
+        <div class="palette a-palette" data-palette="a">
+          <span class="pal-name">kortex</span>
+          <div class="pin"><b>ai</b> <span class="q"></span></div>
+          <p class="ans"></p>
+          <div class="act">
+            <span class="act-text"></span>
+            <span class="choices"><button type="button" class="primary" data-choice="once">Allow once</button><button type="button" data-choice="always">Always</button><button type="button" data-choice="deny">Deny</button></span>
+          </div>
+          <p class="status" aria-live="polite"></p>
+        </div>
+        <div class="asks" data-asks="a" role="group" aria-label="Try asking"></div>
+      </figure>
+    </section>
+
+    <figure class="a-shot">
+      <div class="a-shot-frame"><img src="assets/desktop.jpg" alt="The patina desktop: a centred taskbar and one terminal window over a colourful wallpaper" width="1600" height="900"></div>
+      <figcaption>A fresh install, in dark mode. The screenshot is unedited.</figcaption>
+    </figure>
+  </div>
+
+  <section class="a-sec" id="a-assistant">
+    <div class="wrap">
+      <p class="a-kicker">Meet kortex</p>
+      <h2>A helper on your computer, not in someone's cloud.</h2>
+      <p class="a-intro">kortex is patina's assistant. Press the Windows key and Space, then type <code>ai</code> and your request.</p>
+      <div class="a-promises">
+        <div class="a-promise">
+          <svg viewBox="0 0 44 44" aria-hidden="true"><rect x="5" y="9" width="34" height="22" rx="4" fill="none" stroke="#c3a2ff" stroke-width="2"/><path d="M15 36h14" stroke="#7c3aed" stroke-width="2"/><path d="M22 14l5.5 9.5h-11z" fill="#087a46"/></svg>
+          <h3>Runs on your machine</h3>
+          <p>What you ask never leaves it, and it works offline.</p>
+        </div>
+        <div class="a-promise">
+          <svg viewBox="0 0 44 44" aria-hidden="true"><circle cx="22" cy="22" r="17" fill="none" stroke="#c3a2ff" stroke-width="2"/><path d="M14 22.5l5.5 5.5L31 16.5" fill="none" stroke="#087a46" stroke-width="2.5"/></svg>
+          <h3>Shows before it changes</h3>
+          <p>Every change waits for you: Allow once, Always, or Deny.</p>
+        </div>
+        <div class="a-promise">
+          <svg viewBox="0 0 44 44" aria-hidden="true"><path d="M8 15h28M8 29h28" stroke="#c3a2ff" stroke-width="2"/><circle cx="15" cy="15" r="4.5" fill="#f7f6fb" stroke="#7c3aed" stroke-width="2"/><circle cx="29" cy="29" r="4.5" fill="#087a46"/></svg>
+          <h3>Yours to choose</h3>
+          <p>Prefer the cloud? Pick a provider, European ones first. Or switch it off.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="a-sec" id="a-apps">
+    <div class="wrap">
+      <p class="a-kicker">Day one</p>
+      <h2>Everything you need is already there.</h2>
+      <p class="a-intro">One good, free app for every everyday job.</p>
+      <div class="a-apps">
+        <div class="a-app"><span class="task">Mail and calendar</span><h3>Thunderbird</h3><p>All your accounts in one inbox.</p></div>
+        <div class="a-app"><span class="task">Files everywhere</span><h3>Nextcloud</h3><p>Sync in the EU or on your own server.</p></div>
+        <div class="a-app"><span class="task">Documents</span><h3>Euro-Office</h3><p>Opens Word, Excel and PowerPoint files.</p></div>
+        <div class="a-app"><span class="task">Passwords</span><h3>KeePassXC</h3><p>Passwords in a file only you hold.</p></div>
+        <div class="a-app"><span class="task">The web</span><h3>Firefox ESR</h3><p>Telemetry and sponsored content off.</p></div>
+        <div class="a-app"><span class="task">Chat</span><h3>Element</h3><p>Encrypted chat on Matrix.</p></div>
+        <div class="a-app"><span class="task">Photos, video, PDFs</span><h3>Gwenview, Haruna, Okular</h3><p>Photos, video and PDFs.</p></div>
+        <div class="a-app"><span class="task">Music and more</span><h3>Tauon, Zed</h3><p>Music, and code when you get curious.</p></div>
+      </div>
+      <div class="a-craft">
+        <div class="a-craft-head">
+          <h3>Creative work: the ArtCraft suite</h3>
+          <span class="a-craft-badge">Optional · early alpha</span>
+        </div>
+        <p>Free tools for design, photo, video and sound. One launcher installs the ones you pick.</p>
+        <ul>
+          <li><b>PhotoCraft</b><span>Photo editing</span></li>
+          <li><b>VectorCraft</b><span>Illustration</span></li>
+          <li><b>FilmCraft</b><span>Video editing</span></li>
+          <li><b>LightCraft</b><span>Photo library</span></li>
+          <li><b>EffectCraft</b><span>Motion graphics</span></li>
+          <li><b>DesignCraft</b><span>Page layout</span></li>
+          <li><b>FigCraft</b><span>Interface design</span></li>
+          <li><b>CADCraft</b><span>Technical drawing</span></li>
+          <li><b>SoundCraft</b><span>Audio</span></li>
+          <li><b>PdfCraft</b><span>PDFs</span></li>
+          <li><b>WordCraft</b><span>Writing</span></li>
+          <li><b>GridCraft</b><span>Spreadsheets</span></li>
+          <li><b>DeckCraft</b><span>Slides</span></li>
+          <li class="launcher"><b>Launcher</b><span>Installs them</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="a-sec" id="a-values">
+    <div class="wrap">
+      <p class="a-kicker">What patina stands for</p>
+      <h2>Three promises that come with every install.</h2>
+      <div class="a-promises">
+        <div class="a-promise">
+          <svg viewBox="0 0 44 44" aria-hidden="true"><circle cx="22" cy="22" r="20" fill="none" stroke="#c3a2ff" stroke-width="2"/><circle cx="22" cy="22" r="13" fill="none" stroke="#7c3aed" stroke-width="2"/><path d="M22 15l6 10.5H16z" fill="#087a46"/></svg>
+          <h3>Free software by default</h3>
+          <p>Every app it installs is free and open source. Anything else is opt-in.</p>
+        </div>
+        <div class="a-promise">
+          <svg viewBox="0 0 44 44" aria-hidden="true"><rect x="4" y="10" width="36" height="24" rx="5" fill="none" stroke="#c3a2ff" stroke-width="2"/><circle cx="22" cy="22" r="6" fill="none" stroke="#7c3aed" stroke-width="2"/><circle cx="22" cy="22" r="2" fill="#087a46"/></svg>
+          <h3>Your data stays close</h3>
+          <p>No account to create, no telemetry. Your files sync where you choose.</p>
+        </div>
+        <div class="a-promise">
+          <svg viewBox="0 0 44 44" aria-hidden="true"><path d="M6 34h32" stroke="#c3a2ff" stroke-width="2"/><path d="M10 34V20h24v14" fill="none" stroke="#7c3aed" stroke-width="2"/><path d="M22 7l9 10H13z" fill="#087a46"/></svg>
+          <h3>A new OS on a trusted base</h3>
+          <p>Debian 13 underneath. Security updates come straight from Debian.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="a-sec" id="a-look">
+    <div class="wrap a-split">
+      <div>
+        <p class="a-kicker">The look</p>
+        <h2>One look, from the first screen to the last.</h2>
+        <p class="a-intro">Installer, login, apps and terminal share one theme, in light or true-black dark.</p>
+        <ul class="a-list">
+          <li>A centred taskbar, like Windows 11.</li>
+          <li>Windows open in the middle.</li>
+          <li>One quiet colour for every icon.</li>
+        </ul>
+      </div>
+      <div>
+        <div class="a-modes">
+          <div>
+            <div class="mini light" aria-hidden="true"><div class="win"><div class="bar"></div><div class="ln acc-l"></div><div class="ln" style="width:80%"></div><div class="ln" style="width:65%"></div><div class="ln g-l"></div></div><div class="task"><i></i><i></i><i class="on"></i><i></i></div></div>
+            <p class="mini-label">Light mode</p>
+          </div>
+          <div>
+            <div class="mini dark" aria-hidden="true"><div class="win"><div class="bar"></div><div class="ln acc-d"></div><div class="ln" style="width:80%"></div><div class="ln" style="width:65%"></div><div class="ln g-d"></div></div><div class="task"><i></i><i></i><i class="on"></i><i></i></div></div>
+            <p class="mini-label">Dark mode, true black</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+
+  <section class="a-sec" id="a-status">
+    <div class="wrap">
+      <p class="a-kicker">Where things stand</p>
+      <h2>Early, open, and moving step by step.</h2>
+      <p class="a-intro">patina is in alpha. Follow along to hear when the installer is ready.</p>
+      <figure class="a-shot a-shot-sm">
+        <div class="a-shot-frame"><img src="assets/installer.jpg" alt="The patina installer welcome page with steps for location, keyboard, partitions, users and the AI agent" width="1400" height="875"></div>
+        <figcaption>Coming next: the installer.</figcaption>
+      </figure>
+      <ol class="a-steps">
+        <li class="now"><span class="dot"></span><span class="when">Now</span><h3>Alpha on Debian 13</h3><p>Install Debian, run one command.</p></li>
+        <li><span class="dot"></span><span class="when">Next</span><h3>The installer image</h3><p>Boot from USB, answer a few questions.</p></li>
+        <li><span class="dot"></span><span class="when">Then</span><h3>Tested on ARM</h3><p>Raspberry Pi and Snapdragon laptops. Not Apple Silicon.</p></li>
+        <li><span class="dot"></span><span class="when">Then</span><h3>Version 0.1</h3><p>The first release for everyone.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="a-sec">
+    <div class="wrap a-who">
+      <div>
+        <p class="a-kicker">How it is made</p>
+        <h2>Made in the open.</h2>
+      </div>
+      <div>
+        <p class="a-intro" style="margin-top:0">Every line is public and GPL. patina builds on what Debian and KDE do well, and adds nothing that needs its own security team. Themes and fixes are welcome.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="wrap">
+    <section class="a-cta">
+      <canvas id="a-cta-contour" aria-hidden="true"></canvas>
+      <div class="a-cta-inner">
+        <div>
+          <h2 class="a-sec-h" style="font:700 clamp(1.9rem,3.6vw,2.8rem)/1.1 var(--f-display);letter-spacing:-.03em">Follow the OS you can ask, as it takes shape.</h2>
+          <p>Watch for the installer. Star it if you want this to exist.</p>
+        </div>
+        <div class="a-cta-side">
+          <img class="wm-big" src="assets/wordmark-dark.svg" alt="patina" width="290" height="200">
+          <div class="btn-row">
+            <a class="btn a-btn" href="https://github.com/patina21/patina" target="_blank" rel="noopener"><svg viewBox="0 0 16 16" aria-hidden="true" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>Follow on GitHub</a>
+            <a class="btn a-btn-ghost" href="https://github.com/patina21/patina/releases" target="_blank" rel="noopener">Releases</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="a-foot">
+      <p>patina is based on Debian, with KDE Plasma. GPL-3.0-or-later. Debian is a trademark of SPI Inc.; KDE and Plasma are trademarks of KDE e.V. Not affiliated.</p>
+      <p><a href="https://github.com/patina21/kortex" target="_blank" rel="noopener">kortex</a> · <a href="https://github.com/patina21/patina/blob/main/LICENSE" target="_blank" rel="noopener">Licence</a></p>
+    </footer>
+  </div>
+</div>
+
+<script src="assets/site.js"></script>
+</body>
+</html>
