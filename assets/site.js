@@ -3,14 +3,15 @@
   /* the command palette demos: example requests, nothing real runs */
   var asks = {
     a: {
-      wait: 'Waiting for your answer', none: 'Only looked. Nothing to approve.',
-      done: { once: 'Done, this one time.', always: 'Done. Changes like this will not ask again.', deny: 'Denied. Nothing was changed.' },
+      wait: 'Ready. One click and it is done.', none: 'Answered. Nothing to change.',
+      done: { once: 'Done.', always: 'Done. Changes like this will not ask again.', deny: 'Skipped. Nothing was changed.' },
       items: [
-        ['Bigger text', 'make the text a little bigger', 'Your system font is 10 pt. I can set it to 11 pt for all apps.', 'Change the system font size to 11 pt'],
-        ['Dark mode', 'switch to dark mode', 'True black, easy on the eyes. Windows and files stay as they are.', 'Switch the theme to dark mode'],
-        ['Set up my mail', 'set up my work email, it is anna@example.eu', 'I\'ll open Thunderbird\'s setup with your address filled in. Your password stays with you.', 'Open Thunderbird\'s account setup for anna@example.eu'],
-        ['Loud fan', 'why is my fan so loud?', 'A video tab has kept one core busy for ten minutes. Pausing it should quiet the fan.', null],
-        ['Photo editor', 'I need something like Photoshop', 'PhotoCraft works the way Photoshop does, and it is free. The ArtCraft Launcher installs it.', 'Install PhotoCraft with the ArtCraft Launcher']
+        ['Printer won\'t print', 'my printer stopped printing', 'The queue of your LaserJet was paused after a paper jam, with three jobs waiting. I can resume it, and they print right away.', 'Resume the LaserJet\'s queue and print the 3 waiting jobs'],
+        ['Connect Linear', 'connect yourself to my Linear', 'Linear has an MCP server. I\'ll add it to my tools; you sign in once in the browser, then I can read and write your issues.', 'Add Linear\'s MCP server and open its sign-in'],
+        ['Write a ticket', 'file a ticket: PDF export cuts off the last page', 'Drafted for the Web team: steps to reproduce, expected and actual result, labelled Bug.', 'Create the issue in Linear'],
+        ['Today\'s to-dos', 'what\'s on my list for today?', 'Four things in your Nextcloud: the invoice to Berger (overdue), call the dentist, review Lena\'s draft, and the team call at 15:00.', null],
+        ['Photoshop alternative', 'I need something like Photoshop', 'PhotoCraft works the way Photoshop does, opens your PSD files and is free. The ArtCraft Launcher installs it.', 'Install PhotoCraft with the ArtCraft Launcher'],
+        ['Loud fan', 'why is my fan so loud?', 'A video tab in Firefox has kept one core at full load for ten minutes. Stopping it quiets the fan; your other tabs stay open.', 'Stop the busy Firefox tab']
       ]
     },
   };
