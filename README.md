@@ -1,7 +1,7 @@
 # landing
 
-The landing page of [patina](https://github.com/patina-os/patina), the free alternative to
-Windows and macOS for x86-64 and ARM, with its own assistant,
+The landing page of [patina](https://github.com/patina-os/patina), the stylish, free
+alternative to Windows for x86-64 and ARM, with its own assistant,
 [kortex](https://github.com/patina-os/kortex).
 
 A static page with no build step and no outside requests: no CDN, no analytics, no
