@@ -22,6 +22,7 @@
       <ul>
         <li><a href="#a-assistant">kortex</a></li>
         <li><a href="#a-apps">Apps</a></li>
+        <li><a href="#a-arm">ARM</a></li>
         <li><a href="#a-values">Values</a></li>
         <li><a href="#a-status">Status</a></li>
         <li><a href="https://github.com/patina-os/patina" target="_blank" rel="noopener">GitHub</a></li>
@@ -37,7 +38,7 @@
           <a class="btn a-btn" href="https://github.com/patina-os/patina" target="_blank" rel="noopener"><svg viewBox="0 0 16 16" aria-hidden="true" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>Follow on GitHub</a>
           <a class="btn a-btn-ghost" href="#a-assistant">Meet kortex</a>
         </div>
-        <div class="a-facts"><span>Alpha</span><span>x86-64 and ARM</span><span>Works offline</span><span>GPL-3.0</span></div>
+        <div class="a-facts"><span>Installer alpha out</span><span>x86-64 and ARM</span><span>Works offline</span><span>GPL-3.0</span></div>
       </div>
       <figure class="a-ask">
         <canvas id="a-contour" aria-hidden="true"></canvas>
@@ -101,29 +102,66 @@
         <div class="a-app"><span class="task">Photos, video, PDFs</span><h3>Gwenview, Haruna, Okular</h3><p>Photos, video and PDFs.</p></div>
         <div class="a-app"><span class="task">Optional extras</span><h3>Tauon, Zed</h3><p>Music, and code when you get curious. One command adds them.</p></div>
       </div>
+      <div class="a-office">
+        <div class="a-office-text">
+          <h3>Office work, covered: <span class="nw">Euro-Office</span> and Nextcloud</h3>
+          <p>Euro-Office, the free office suite from a European consortium, opens and saves Word, Excel and PowerPoint files on your computer. No account, no subscription, and it works offline.</p>
+          <p>Nextcloud adds what Microsoft 365 does online: your files on every device, shared folders, calendars and contacts, and editing together in the browser.</p>
+          <p class="a-office-note"><b>One thing you bring:</b> a Nextcloud to connect to, on your own server or hosted in the EU. patina sets up the apps, not the cloud.</p>
+        </div>
+        <ul class="a-office-jobs">
+          <li><b>Documents</b><span>Letters, reports, <code>.docx</code></span><i>Euro-Office</i></li>
+          <li><b>Spreadsheets</b><span>Budgets and lists, <code>.xlsx</code></span><i>Euro-Office</i></li>
+          <li><b>Presentations</b><span>Slides, <code>.pptx</code></span><i>Euro-Office</i></li>
+          <li><b>Files everywhere</b><span>Sync, share, phone and PC</span><i class="cloud">Nextcloud</i></li>
+          <li><b>Editing together</b><span>The same file, at the same time</span><i class="cloud">Nextcloud</i></li>
+          <li><b>Calendar and contacts</b><span>Synced into Thunderbird</span><i class="cloud">Nextcloud</i></li>
+        </ul>
+      </div>
       <div class="a-craft">
         <div class="a-craft-head">
           <h3>Creative work: the ArtCraft suite</h3>
           <span class="a-craft-badge">Optional · early alpha</span>
         </div>
-        <p>Free tools for design, photo, video and sound. One launcher installs the ones you pick.</p>
+        <p>Free counterparts of Photoshop, Illustrator, Premiere, Acrobat, Figma and more. One launcher installs the ones you pick and keeps them up to date.</p>
+        <figure class="a-craft-shot">
+          <div class="a-shot-frame"><img src="assets/photocraft.jpg" alt="PhotoCraft with layers, properties and a Twirl filter previewing inside a round selection on Van Gogh's The Starry Night" width="1400" height="875" loading="lazy"></div>
+          <figcaption><b>PhotoCraft</b>, the Photoshop counterpart: layers, selections, adjustment layers, filters with live preview, and Photoshop's PSD files. Screenshot by the PhotoCraft project; the painting is Van Gogh's <i>The Starry Night</i>, in the public domain.</figcaption>
+        </figure>
+        <p class="a-craft-more">And PhotoCraft is one of thirteen. Three can be tried today, ten more are on the way:</p>
         <ul>
-          <li><b>PhotoCraft</b><span>Photo editing</span></li>
-          <li><b>VectorCraft</b><span>Illustration</span></li>
-          <li><b>FilmCraft</b><span>Video editing</span></li>
-          <li><b>LightCraft</b><span>Photo library</span></li>
-          <li><b>EffectCraft</b><span>Motion graphics</span></li>
-          <li><b>DesignCraft</b><span>Page layout</span></li>
-          <li><b>FigCraft</b><span>Interface design</span></li>
-          <li><b>CADCraft</b><span>Technical drawing</span></li>
-          <li><b>SoundCraft</b><span>Audio</span></li>
-          <li><b>PdfCraft</b><span>PDFs</span></li>
-          <li><b>WordCraft</b><span>Writing</span></li>
-          <li><b>GridCraft</b><span>Spreadsheets</span></li>
-          <li><b>DeckCraft</b><span>Slides</span></li>
-          <li class="launcher"><b>Launcher</b><span>Installs them</span></li>
+          <li class="alpha"><b>PhotoCraft</b><span>Photo editing</span><em>Early alpha</em></li>
+          <li class="alpha"><b>PdfCraft</b><span>PDFs</span><em>Early alpha</em></li>
+          <li class="alpha"><b>FigCraft</b><span>Interface design</span><em>Early alpha</em></li>
+          <li><b>VectorCraft</b><span>Illustration</span><em>In development</em></li>
+          <li><b>FilmCraft</b><span>Video editing</span><em>In development</em></li>
+          <li><b>LightCraft</b><span>Photo library</span><em>In development</em></li>
+          <li><b>EffectCraft</b><span>Motion graphics</span><em>In development</em></li>
+          <li><b>DesignCraft</b><span>Page layout</span><em>In development</em></li>
+          <li><b>CADCraft</b><span>Technical drawing</span><em>In development</em></li>
+          <li><b>SoundCraft</b><span>Audio</span><em>In development</em></li>
+          <li><b>WordCraft</b><span>Writing</span><em>In development</em></li>
+          <li><b>GridCraft</b><span>Spreadsheets</span><em>In development</em></li>
+          <li><b>DeckCraft</b><span>Slides</span><em>In development</em></li>
+          <li class="launcher"><b>Launcher</b><span>Installs and updates them</span><em>Early alpha</em></li>
         </ul>
       </div>
+    </div>
+  </section>
+
+  <section class="a-sec" id="a-arm">
+    <div class="wrap">
+      <p class="a-kicker">PCs and ARM</p>
+      <h2>The same patina on ARM laptops.</h2>
+      <p class="a-intro">No separate ARM edition and no cut-down version: the same apps and look, for x86-64 PCs and 64-bit ARM. The ARM installer is built and boot-tested with every change, next to the PC one, and comes out once it has passed its first real install.</p>
+      <ol class="a-arm">
+        <li class="ready"><span class="when">Today</span><h3>PCs and virtual machines</h3><p>x86-64 with the installer; 64-bit ARM on Debian with one command.</p></li>
+        <li class="next"><span class="when">Next</span><h3>Raspberry Pi 4</h3><p>From Debian's own Raspberry Pi image.</p></li>
+        <li class="next"><span class="when">Coming</span><h3>Snapdragon X Elite laptops</h3><p>Like the ThinkPad T14s Gen 6 and the Yoga Slim 7x. Debian already runs on them.</p></li>
+        <li><span class="when">Later</span><h3>Snapdragon X2 Elite</h3><p>Once Debian's kernel supports the new chips.</p></li>
+        <li><span class="when">Eventually</span><h3>Nvidia RTX Spark laptops</h3><p>Windows-only for now. patina follows as soon as Linux runs on them.</p></li>
+      </ol>
+      <p class="a-arm-note">Not planned: Apple Silicon Macs. Asahi Linux serves them better.</p>
     </div>
   </section>
 
@@ -184,15 +222,15 @@
     <div class="wrap">
       <p class="a-kicker">Where things stand</p>
       <h2>Early, open, and moving step by step.</h2>
-      <p class="a-intro">patina is in alpha. Follow along to hear when the installer is ready.</p>
+      <p class="a-intro">patina is in alpha, and the installer is out: its first alpha, for testers, on x86-64 PCs. Boot from USB, answer a few questions, and tell us what you see.</p>
       <figure class="a-shot a-shot-sm">
         <div class="a-shot-frame"><img src="assets/installer.jpg" alt="The patina installer welcome page with steps for location, keyboard, partitions, users and the AI agent" width="1400" height="875"></div>
-        <figcaption>Coming next: the installer.</figcaption>
+        <figcaption>The installer, out now as an alpha for testers.</figcaption>
       </figure>
       <ol class="a-steps">
-        <li class="now"><span class="dot"></span><span class="when">Now</span><h3>Alpha on Debian 13</h3><p>Install Debian, run one command.</p></li>
-        <li><span class="dot"></span><span class="when">Next</span><h3>The installer image</h3><p>Boot from USB, answer a few questions.</p></li>
-        <li><span class="dot"></span><span class="when">Then</span><h3>Tested on ARM</h3><p>Raspberry Pi and Snapdragon laptops. Not Apple Silicon.</p></li>
+        <li class="done"><span class="dot"></span><span class="when">Done</span><h3>Alpha on Debian 13</h3><p>Install Debian, run one command.</p></li>
+        <li class="now"><span class="dot"></span><span class="when">Now</span><h3>The installer, alpha</h3><p>Boot from USB, answer a few questions. Out for testers, on PCs first.</p></li>
+        <li><span class="dot"></span><span class="when">Next</span><h3>Tested on ARM</h3><p>Raspberry Pi and Snapdragon X Elite laptops.</p></li>
         <li><span class="dot"></span><span class="when">Then</span><h3>Version 0.1</h3><p>The first release for everyone.</p></li>
       </ol>
     </div>
@@ -216,13 +254,13 @@
       <div class="a-cta-inner">
         <div>
           <h2 class="a-sec-h" style="font:700 clamp(1.9rem,3.6vw,2.8rem)/1.1 var(--f-display);letter-spacing:-.03em">Follow the OS you can ask, as it takes shape.</h2>
-          <p>Watch for the installer. Star it if you want this to exist.</p>
+          <p>The installer alpha is out for testers. Try it, report what you see, and star it if you want this to exist.</p>
         </div>
         <div class="a-cta-side">
           <img class="wm-big" src="assets/wordmark-dark.svg" alt="patina" width="290" height="200">
           <div class="btn-row">
             <a class="btn a-btn" href="https://github.com/patina-os/patina" target="_blank" rel="noopener"><svg viewBox="0 0 16 16" aria-hidden="true" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>Follow on GitHub</a>
-            <a class="btn a-btn-ghost" href="https://github.com/patina-os/patina/releases" target="_blank" rel="noopener">Releases</a>
+            <a class="btn a-btn-ghost" href="https://github.com/patina-os/patina/releases" target="_blank" rel="noopener">Get the alpha</a>
           </div>
         </div>
       </div>

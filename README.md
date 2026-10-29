@@ -14,6 +14,7 @@ assets/site.js        the kortex demo, the contour lines and the rings around th
 assets/fonts/         Sora, Source Sans 3 and JetBrains Mono (latin, latin-ext), with their OFL licences
 assets/*.svg          the wordmark from patina's branding/export/, light and dark
 assets/*.jpg          the desktop and installer screenshots from patina's docs/screenshots/
+assets/photocraft.jpg PhotoCraft's photocraft-filters.jpg (storytold/photocraft, MIT OR Apache-2.0; the painting is public domain)
 ```
 
 ## Preview
@@ -37,7 +38,11 @@ https://patina-os.github.io/landing/.
 - The wordmark is `branding/export/wordmark-blocks.svg`; `wordmark-light.svg` is the same
   drawing with the letters in aurora light's ink. Copy them again when patina's change.
 - The screenshots are CI's, scaled to 1600 and 1400 px as JPEG; refresh them per release.
-- The ArtCraft apps are the ones listed at [craftingapps.org](https://craftingapps.org).
+- The ArtCraft apps and their status (early alpha or in development) are the ones listed
+  at [craftingapps.org](https://craftingapps.org). The PhotoCraft screenshot is
+  `docs/images/photocraft-filters.jpg` from [PhotoCraft](https://github.com/storytold/photocraft),
+  scaled to 1400 px; its sources are in that directory's `SOURCES.md`.
+- The ARM rows follow patina's `docs/hardware.md`, the roadmap steps its `docs/roadmap.md`.
 
 ## Licence
 
