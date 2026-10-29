@@ -38,11 +38,18 @@ https://patina-os.github.io/landing/.
 - The wordmark is `branding/export/wordmark-blocks.svg`; `wordmark-light.svg` is the same
   drawing with the letters in aurora light's ink. Copy them again when patina's change.
 - The screenshots are CI's, scaled to 1600 and 1400 px as JPEG; refresh them per release.
-- The ArtCraft apps and their status (early alpha or in development) are the ones listed
-  at [craftingapps.org](https://craftingapps.org). The PhotoCraft screenshot is
-  `docs/images/photocraft-filters.jpg` from [PhotoCraft](https://github.com/storytold/photocraft),
+- The ArtCraft apps are the ones listed at [craftingapps.org](https://craftingapps.org).
+  The page calls them all ready for early use, the maintainer's call (October 2026), ahead
+  of the labels on that site, which still list most as in development. The PhotoCraft
+  screenshot is `docs/images/photocraft-filters.jpg` from [PhotoCraft](https://github.com/storytold/photocraft),
   scaled to 1400 px; its sources are in that directory's `SOURCES.md`.
-- The ARM rows follow patina's `docs/hardware.md`, the roadmap steps its `docs/roadmap.md`.
+- The ARM rows and the Apple Silicon note follow patina's `docs/hardware.md`, the roadmap
+  steps its `docs/roadmap.md`.
+- The downloads point at the latest releases by file name:
+  `patina-amd64.hybrid.iso` and `SHA256SUMS` of patina,
+  `TryPatina.exe` and `TryPatina.exe.sha256` of
+  [win-emulator](https://github.com/patina-os/win-emulator). Change them when a name changes.
+- The kortex demo's requests are examples in `assets/site.js`; nothing real runs.
 
 ## Licence
 
