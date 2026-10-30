@@ -12,7 +12,8 @@ index.html            the page
 assets/site.css       aurora's light palette, the layout, the self-hosted fonts
 assets/site.js        kortex's diagrams, the contour lines and the rings around the wordmark (nothing talks to a server)
 assets/fonts/         Sora, Source Sans 3 and JetBrains Mono (latin, latin-ext), with their OFL licences
-assets/*.svg          the wordmark from patina's branding/export/, light and dark
+assets/wordmark-*.svg the wordmark from patina's branding/export/, light and dark
+assets/kortex-*.svg   kortex's diagrams as animated SVGs, light and dark, for patina's README
 assets/*.jpg          the desktop and installer screenshots from patina's docs/screenshots/
 assets/photocraft.jpg PhotoCraft's photocraft-filters.jpg (storytold/photocraft, MIT OR Apache-2.0; the painting is public domain)
 ```
@@ -53,8 +54,12 @@ https://patina-os.github.io/landing/.
   requests are what people ask an assistant for; opencode asks before every change, Hermes
   before risky ones. The agents follow patina's AI step, the models its
   `defaults/settings.yaml` (`ai.local`, `ai.cloud`), the services its `defaults/services.yaml`.
+- `kortex-ask-*.svg` (the hero's diagram) and `kortex-things-*.svg` (what kortex works
+  with) are the same diagrams drawn as SVGs that animate without a script, with the fonts
+  inside, in aurora's light and dark palettes, so patina's README can show them. Draw them
+  again when the diagrams change.
 
 ## Licence
 
-GPL-3.0-or-later, like patina. The fonts are under the SIL Open Font License 1.1
-(`assets/fonts/OFL-*.txt`).
+GPL-3.0-or-later, like patina. The fonts, also those inside `assets/kortex-*.svg`, are
+under the SIL Open Font License 1.1 (`assets/fonts/OFL-*.txt`).
