@@ -274,7 +274,8 @@
       { x: 336, y: 56, ico: 'globe', c: 'v', name: 'Other cloud', cap: 'thinking · a provider you pick', ms: 2600 },
       { x: 336, y: 164, ico: 'power', c: '', name: 'Off', cap: 'off until you turn it on', ms: 2400 }
     ];
-    /* the services follow patina's defaults/services.yaml */
+    /* the things on the PC, and three of the services of patina's defaults/services.yaml
+       (the caption names all four) */
     var things = [
       { x: 64, y: 44, ico: 'printer', c: 'g', name: 'Printer', cap: 'working · on your PC' },
       { x: 64, y: 118, ico: 'gear', c: 'g', name: 'Settings', cap: 'working · on your PC' },
