@@ -10,7 +10,7 @@ Google Fonts. Everything it loads is in this repository.
 ```text
 index.html            the page
 assets/site.css       aurora's light palette, the layout, the self-hosted fonts
-assets/site.js        the kortex demo, the contour lines and the rings around the wordmark (nothing talks to a server)
+assets/site.js        kortex's diagrams, the contour lines and the rings around the wordmark (nothing talks to a server)
 assets/fonts/         Sora, Source Sans 3 and JetBrains Mono (latin, latin-ext), with their OFL licences
 assets/*.svg          the wordmark from patina's branding/export/, light and dark
 assets/*.jpg          the desktop and installer screenshots from patina's docs/screenshots/
@@ -49,7 +49,10 @@ https://patina-os.github.io/landing/.
   `patina-amd64.hybrid.iso` and `SHA256SUMS` of patina,
   `TryPatina.exe` and `TryPatina.exe.sha256` of
   [win-emulator](https://github.com/patina-os/win-emulator). Change them when a name changes.
-- The kortex demo's requests are examples in `assets/site.js`; nothing real runs.
+- kortex's diagrams are examples in `assets/site.js`; nothing real runs. The hero's
+  requests are what people ask an assistant for; opencode asks before every change, Hermes
+  before risky ones. The agents follow patina's AI step, the models its
+  `defaults/settings.yaml` (`ai.local`, `ai.cloud`), the services its `defaults/services.yaml`.
 
 ## Licence
 
