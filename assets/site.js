@@ -40,13 +40,6 @@
       ctx.stroke();
     }
     ctx.globalAlpha = 1; ctx.shadowBlur = 0;
-    if (opt.peak) {
-      var px = cx - maxR * 0.17, py = cy + maxR * 0.05, sz = opt.peak;
-      ctx.beginPath(); ctx.moveTo(px, py - sz); ctx.lineTo(px + sz * .9, py + sz * .6); ctx.lineTo(px - sz * .9, py + sz * .6); ctx.closePath();
-      ctx.fillStyle = opt.peakColor;
-      if (opt.glow) { ctx.shadowColor = opt.peakColor; ctx.shadowBlur = 18; }
-      ctx.fill(); ctx.shadowBlur = 0;
-    }
     return true;
   }
   /* pixel rings from the wordmark's ▲: square cells on a grid like the wordmark's blocks,
@@ -331,8 +324,8 @@
   })();
 
   var specs = {
-    'a-contour': { cx: .6, cy: .45, reach: .5, rings: 22, inner: '#7c3aed', outer: '#c3a2ff', thin: 1.1, bold: 1.8, alpha: function (t) { return .35 + (1 - t) * .6; }, peak: 11, peakColor: '#087a46' },
-    'a-cta-contour': { cx: .9, cy: .15, reach: .7, rings: 26, inner: '#3cff9d', outer: '#6d4fc2', thin: 1, bold: 1.5, alpha: function (t) { return .2 + (1 - t) * .5; }, peak: 0 }
+    'a-contour': { cx: .6, cy: .45, reach: .47, rings: 22, inner: '#7c3aed', outer: '#c3a2ff', thin: 1.1, bold: 1.8, alpha: function (t) { return .35 + (1 - t) * .6; } },
+    'a-cta-contour': { cx: .9, cy: .15, reach: .7, rings: 26, inner: '#3cff9d', outer: '#6d4fc2', thin: 1, bold: 1.5, alpha: function (t) { return .2 + (1 - t) * .5; } }
   };
   function drawAll() {
     Object.keys(specs).forEach(function (id) {
