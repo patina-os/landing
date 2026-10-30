@@ -34,26 +34,21 @@
       <div>
         <p class="a-eyebrow rise">The stylish, free alternative to Windows</p>
         <h1 class="rise d2">A new OS you can just ask. <span>And it gets it done.</span></h1>
-        <p class="a-lede rise d3">A complete, free desktop for PCs and ARM laptops, with its own assistant, kortex. Say what you need in plain words, and it fixes the printer, installs the app or files the ticket. It can run entirely on your own computer.</p>
+        <p class="a-lede rise d3">A complete, free desktop for PCs and ARM laptops, with its own assistant, kortex. Say what you need in plain words, and it fixes the printer, installs the app or files the ticket. The AI is yours to pick: your own model on your computer, a European one if you like, or a cloud.</p>
         <div class="btn-row">
           <a class="btn a-btn" href="#a-try"><svg viewBox="0 0 16 16" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 2v8.5M4.25 7l3.75 3.75L11.75 7M2.5 14h11"/></svg>Try patina</a>
           <a class="btn a-btn-ghost" href="https://github.com/patina-os/patina" target="_blank" rel="noopener"><svg viewBox="0 0 16 16" aria-hidden="true" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>Follow on GitHub</a>
         </div>
-        <div class="a-facts"><span>Installer alpha out</span><span>Try it on Windows</span><span>x86-64 and ARM</span><span>Works offline</span><span>GPL-3.0</span></div>
+        <div class="a-facts"><span>Installer alpha out</span><span>Try it on Windows</span><span>x86-64 and ARM</span><span>Your own AI, offline</span><span>GPL-3.0</span></div>
       </div>
       <figure class="a-ask">
         <canvas id="a-contour" aria-hidden="true"></canvas>
-        <div class="palette a-palette" data-palette="a">
-          <span class="pal-name">kortex</span>
-          <div class="pin"><b>ai</b> <span class="q"></span></div>
-          <p class="ans"></p>
-          <div class="act">
-            <span class="act-text"></span>
-            <span class="choices"><button type="button" class="primary" data-choice="once">Allow once</button><button type="button" data-choice="always">Always</button><button type="button" data-choice="deny">Deny</button></span>
+        <div class="kx-frame"><i></i><i></i><i></i><i></i>
+          <div class="kx-card">
+            <div class="kx-ask" aria-hidden="true"><b>ai</b><span class="t" id="kx-ask">my printer stopped printing</span><span class="caret"></span></div>
+            <div class="kx-diag-a" id="kx-diag-a" role="img" aria-label="You ask kortex in plain words, it hands the request to opencode or Hermes, and the finished job comes back: printer fixed, PhotoCraft installed, Linear connected, a ticket filed, today's to-dos, a quiet fan."></div>
           </div>
-          <p class="status" aria-live="polite"></p>
         </div>
-        <div class="asks" data-asks="a" role="group" aria-label="Try asking"></div>
       </figure>
     </section>
 
@@ -67,22 +62,19 @@
     <div class="wrap">
       <p class="a-kicker">Meet kortex</p>
       <h2>Say what you need. kortex does it.</h2>
-      <p class="a-intro">kortex is patina's assistant. Press the Windows key and Space, type <code>ai</code> and what you need. It finds out why the printer stopped, installs the app, changes the setting and works with your services, from your Nextcloud to Linear. It stays off until you turn it on, in the installer or later.</p>
-      <div class="a-promises">
-        <div class="a-promise">
-          <svg viewBox="0 0 44 44" aria-hidden="true"><circle cx="22" cy="22" r="17" fill="none" stroke="#c3a2ff" stroke-width="2"/><path d="M14 22.5l5.5 5.5L31 16.5" fill="none" stroke="#087a46" stroke-width="2.5"/></svg>
-          <h3>Gets it done</h3>
-          <p>Not just advice: it runs the fix, installs the app, writes the ticket. One click approves a change, or every change like it.</p>
+      <p class="a-intro">Press <kbd>Windows</kbd> + <kbd>Space</kbd>, type <code>ai</code> and what you need. kortex hands it to the AI agent you pick, opencode or Hermes, and gets it done. It stays off until you turn it on, in the installer or later.</p>
+      <div class="kx-bento">
+        <div class="kx-frame"><i></i><i></i><i></i><i></i>
+          <div class="kx-card">
+            <svg id="kx-diag-b" viewBox="0 0 400 226" aria-hidden="true"></svg>
+            <div class="kx-cap"><h3>Your AI, your choice</h3><p>Your own model right on your PC, like Mistral's from France: private, and it works offline. Or a cloud, European ones first.</p></div>
+          </div>
         </div>
-        <div class="a-promise">
-          <svg viewBox="0 0 44 44" aria-hidden="true"><path d="M22 23L8 9M22 23L36 9M22 23v14" stroke="#c3a2ff" stroke-width="2"/><circle cx="8" cy="9" r="5" fill="#f7f6fb" stroke="#7c3aed" stroke-width="2"/><circle cx="36" cy="9" r="5" fill="#f7f6fb" stroke="#7c3aed" stroke-width="2"/><circle cx="22" cy="37" r="5" fill="#f7f6fb" stroke="#7c3aed" stroke-width="2"/><path d="M22 16.5l6.5 11h-13z" fill="#087a46"/></svg>
-          <h3>Connects to your services</h3>
-          <p>Through MCP, the open standard for AI tools: your Nextcloud, Linear, GitHub and many more. Ask it to connect one, and it does the setup.</p>
-        </div>
-        <div class="a-promise">
-          <svg viewBox="0 0 44 44" aria-hidden="true"><rect x="5" y="9" width="34" height="22" rx="4" fill="none" stroke="#c3a2ff" stroke-width="2"/><path d="M15 36h14" stroke="#7c3aed" stroke-width="2"/><path d="M22 14l5.5 9.5h-11z" fill="#087a46"/></svg>
-          <h3>Private when you want it</h3>
-          <p>With a local model, nothing you ask leaves your computer, and it works offline. Or pick a cloud provider, European ones first.</p>
+        <div class="kx-frame"><i></i><i></i><i></i><i></i>
+          <div class="kx-card">
+            <svg id="kx-diag-c" viewBox="0 0 400 236" aria-hidden="true"></svg>
+            <div class="kx-cap"><h3>Works with your things</h3><p>Your PC's settings, apps and printer, and the services you connect, from Nextcloud to Linear.</p></div>
+          </div>
         </div>
       </div>
     </div>
