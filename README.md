@@ -51,8 +51,7 @@ https://patina-os.github.io/landing/.
   `TryPatina.exe` and `TryPatina.exe.sha256` of
   [win-emulator](https://github.com/patina-os/win-emulator). Change them when a name changes.
 - kortex's diagrams are examples in `assets/site.js`; nothing real runs. The hero's
-  requests are what people ask an assistant for; opencode asks before every change, Hermes
-  before risky ones. The agents follow patina's AI step, the models its
+  requests are what people ask an assistant for. The models follow patina's
   `defaults/settings.yaml` (`ai.local`, `ai.cloud`), the services its `defaults/services.yaml`.
 - `kortex-ask-*.svg` (the hero's diagram) and `kortex-things-*.svg` (what kortex works
   with) are the same diagrams drawn as SVGs that animate without a script, with the fonts
