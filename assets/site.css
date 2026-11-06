@@ -422,10 +422,6 @@ code, .mono { font-family: var(--f-mono); }
 .kx-t-mono { font: 400 11px var(--f-mono); fill: var(--a-muted); letter-spacing: .02em; }
 .kx-t-lbl { font: 600 13px var(--f-body); fill: var(--a-ink); }
 .kx-t-eu { font: 700 8.5px var(--f-display); fill: var(--a-text); stroke: none; }
-.kx-chip rect { fill: #fff; stroke: var(--a-line2); transition: fill .3s, stroke .3s; }
-.kx-chip text { font: 600 10px var(--f-mono); fill: var(--a-muted); transition: fill .3s; }
-.kx-chip.on rect { fill: var(--a-ink); stroke: var(--a-ink); }
-.kx-chip.on text { fill: #f7f6fb; }
 .kx-sheet { fill: #fff; stroke: var(--a-line); }
 .kx-sheet.top { stroke: var(--a-line2); }
 .kx-sheet.back2 { fill: #f3f1f8; }

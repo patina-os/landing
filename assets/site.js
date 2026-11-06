@@ -147,15 +147,14 @@
       var mx = (x1 + x2) / 2; return 'M' + x1 + ',' + y1 + ' C' + mx + ',' + y1 + ' ' + mx + ',' + y2 + ' ' + x2 + ',' + y2;
     }
 
-    /* the hero: you ask, kortex hands it to the agent, a finished job lands on the pile.
-       opencode asks before every change, Hermes before risky ones. */
+    /* the hero: you ask, kortex gets it done, a finished job lands on the pile */
     var asks = [
-      { ico: 'printer', ask: 'my printer stopped printing', agent: 0, title: 'Printing again', sub: ['Paper jam cleared.', 'You allowed the fix.'] },
-      { ico: 'photo', ask: 'something like Photoshop', agent: 1, title: 'Got PhotoCraft', sub: ['Free, like Photoshop.', 'Opens PSD files.'] },
-      { ico: 'plug', ask: 'connect yourself to my Linear', agent: 0, title: 'Connected', sub: ['To your Linear.', 'You signed in once.'] },
-      { ico: 'ticket', ask: 'file a ticket: PDF export bug', agent: 1, title: 'Ticket filed', sub: ['In Linear, as a bug,', 'for the Web team.'] },
-      { ico: 'calendar', ask: 'what\'s on my list today?', agent: 1, title: '4 things today', sub: ['Invoice overdue, then', 'team call at 15:00.'] },
-      { ico: 'fan', ask: 'why is my fan so loud?', agent: 0, title: 'Fan is quiet', sub: ['Stopped a busy tab.', 'You allowed it.'] }
+      { ico: 'printer', ask: 'my printer stopped printing', title: 'Printing again', sub: ['Paper jam cleared.', 'You allowed the fix.'] },
+      { ico: 'photo', ask: 'something like Photoshop', title: 'Got PhotoCraft', sub: ['Free, like Photoshop.', 'Opens PSD files.'] },
+      { ico: 'plug', ask: 'connect yourself to my Linear', title: 'Connected', sub: ['To your Linear.', 'You signed in once.'] },
+      { ico: 'ticket', ask: 'file a ticket: PDF export bug', title: 'Ticket filed', sub: ['In Linear, as a bug,', 'for the Web team.'] },
+      { ico: 'calendar', ask: 'what\'s on my list today?', title: '4 things today', sub: ['Invoice overdue, then', 'team call at 15:00.'] },
+      { ico: 'fan', ask: 'why is my fan so loud?', title: 'Fan is quiet', sub: ['Stopped a busy tab.', 'You allowed it.'] }
     ];
     var ring = [[-57, -33], [-6, -66], [51, -42], [-57, 33], [-6, 66], [51, 42]];
     function around(c, offs) { return offs.map(function (o) { return [c[0] + o[0], c[1] + o[1]]; }); }
@@ -198,14 +197,6 @@
       el('path', { d: 'M' + (h[0] + 18) + ',' + (h[1] + 28) + ' l7,-12 l7,12 z', 'class': 'kx-tri' }, svg);
       el('text', { x: h[0] + 40, y: h[1] + 27, 'class': 'kx-t-hub' }, svg, 'kortex');
       el('path', { d: 'M' + (h[0] + h[2] - 20) + ',' + (h[1] + 17) + ' l5,5 -5,5', 'class': 'kx-ico' }, svg);
-      var chips = [['opencode', 64], ['Hermes', 56]], x = h[0] + h[2] / 2 - (64 + 6 + 56) / 2, y = h[1] + h[3] + 12;
-      r.chips = chips.map(function (c) {
-        var g = el('g', { 'class': 'kx-chip' }, svg);
-        el('rect', { x: x, y: y, width: c[1], height: 19, rx: 5 }, g);
-        el('text', { x: x + c[1] / 2, y: y + 13, 'text-anchor': 'middle' }, g, c[0]);
-        x += c[1] + 6;
-        return g;
-      });
       var s = L.sheet;
       el('rect', { x: s[0] + 16, y: s[1] - 16, width: s[2], height: s[3], rx: 8, 'class': 'kx-sheet back2' }, svg);
       el('rect', { x: s[0] + 8, y: s[1] - 8, width: s[2], height: s[3], rx: 8, 'class': 'kx-sheet back1' }, svg);
@@ -216,7 +207,6 @@
     function showA(animate) {
       var it = asks[aI], s = a.sheet;
       a.bubs.forEach(function (g, k) { g.classList.toggle('on', k === aI); });
-      a.chips.forEach(function (g, k) { g.classList.toggle('on', k === it.agent); });
       a.top.innerHTML = '';
       var g = el('g', animate ? { 'class': 'kx-new' } : {}, a.top);
       el('rect', { x: s[0], y: s[1], width: s[2], height: s[3], rx: 8, 'class': 'kx-sheet top' }, g);
