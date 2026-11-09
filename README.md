@@ -14,7 +14,8 @@ assets/site.js        kortex's diagrams, the contour lines and the rings around 
 assets/fonts/         Sora, Source Sans 3 and JetBrains Mono (latin, latin-ext), with their OFL licences
 assets/wordmark-*.svg the wordmark from patina's branding/export/, light and dark
 assets/kortex-*.svg   kortex's diagrams as animated SVGs, light and dark, for patina's README
-assets/*.jpg          the desktop and installer screenshots from patina's docs/screenshots/
+assets/welcome.jpg    the welcome at a first login, from patina's desktop workflow
+assets/installer.jpg  the installer screenshot from patina's docs/screenshots/
 assets/photocraft.jpg PhotoCraft's photocraft-filters.jpg (storytold/photocraft, MIT OR Apache-2.0; the painting is public domain)
 ```
 
@@ -38,7 +39,11 @@ https://patina-os.github.io/landing/.
 - The colours are aurora's light palette (`themes/aurora/theme.yaml`, the `light:` block).
 - The wordmark is `branding/export/wordmark-blocks.svg`; `wordmark-light.svg` is the same
   drawing with the letters in aurora light's ink. Copy them again when patina's change.
-- The screenshots are CI's, scaled to 1600 and 1400 px as JPEG; refresh them per release.
+- The screenshots are CI's, scaled to 1600 and 1400 px as JPEG, nothing else changed;
+  refresh them per release. `welcome.jpg` is `welcome.png` from the `desktop-amd64`
+  artifact of patina's `desktop` workflow (`desktops/plasma/screenshot.sh`, which
+  `docs/screenshots/` does not keep); `installer.jpg` is patina's
+  `docs/screenshots/installer-amd64.png`.
 - The ArtCraft apps are the ones listed at [craftingapps.org](https://craftingapps.org).
   The page calls them all ready for early use, the maintainer's call (October 2026), ahead
   of the labels on that site, which still list most as in development. The PhotoCraft
@@ -51,7 +56,9 @@ https://patina-os.github.io/landing/.
   `TryPatina.exe` and `TryPatina.exe.sha256` of
   [win-emulator](https://github.com/patina-os/win-emulator). Change them when a name changes.
 - kortex's diagrams are examples in `assets/site.js`; nothing real runs. The hero's
-  requests are what people ask an assistant for. The models follow patina's
+  requests are what people ask an assistant for, after `kortex ›`, as the command palette
+  shows them once Windows+A opened it on kortex (the `ask` key in patina's
+  `defaults/keybindings.yaml`); the kortex section names that key. The models follow patina's
   `defaults/settings.yaml` (`ai.local`, `ai.cloud`), the services its `defaults/services.yaml`.
 - `kortex-ask-*.svg` (the hero's diagram) and `kortex-things-*.svg` (what kortex works
   with) are the same diagrams drawn as SVGs that animate without a script, with the fonts
