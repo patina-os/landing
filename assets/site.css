@@ -225,6 +225,7 @@ code, .mono { font-family: var(--f-mono); }
 .a-shot-frame { border-radius: 16px; overflow: hidden; border: 1px solid var(--a-line); box-shadow: 0 30px 60px -30px rgba(42, 38, 56, .45); background: #000; }
 .a-shot-sm { margin: 40px 0 0; max-width: 760px; }
 .a-shot figcaption { margin-top: 14px; color: var(--a-muted); font-size: 15px; max-width: 46em; }
+.a-shot figcaption b { color: var(--a-ink); }
 
 .a-sec { padding-block: 72px; border-top: 1px solid var(--a-line); }
 .a-kicker { font: 700 12px/1 var(--f-display); letter-spacing: .16em; text-transform: uppercase; color: var(--a-deep); margin-bottom: 16px; }
