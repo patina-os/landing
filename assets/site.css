@@ -390,9 +390,11 @@ code, .mono { font-family: var(--f-mono); }
 .kx-cap h3 { font: 700 15px/1.3 var(--f-display); color: var(--a-ink); letter-spacing: -.01em; }
 .kx-cap p { font-size: 15px; line-height: 1.5; color: var(--a-muted); max-width: 40ch; margin-top: 3px; }
 .kx-ask { align-self: flex-start; display: flex; align-items: center; gap: 9px; font: 400 14px/1.3 var(--f-mono); color: var(--a-ink); background: var(--a-panel); border-radius: 9px; padding: 8px 12px; max-width: 100%; min-width: 0; }
-.kx-ask b { color: var(--a-violet); font-weight: 600; }
+.kx-ask b { color: var(--a-violet); font-weight: 600; white-space: nowrap; flex: none; }
 .kx-ask .t { overflow-wrap: anywhere; }
 .kx-ask .caret { width: 6px; height: 1em; background: var(--a-violet); animation: kx-blink 1s steps(1) infinite; flex: none; }
+/* on a phone the longest request stays on one line beside "kortex ›", so the diagram below holds still while it types */
+@media (max-width: 480px) { .kx-ask { font-size: 12px; gap: 7px; padding: 8px 10px; } }
 @keyframes kx-blink { 50% { opacity: 0; } }
 .kx-diag-a { width: 100%; max-width: 700px; align-self: center; }
 .kx-wire { fill: none; stroke: var(--a-line2); stroke-width: 1.3; }
