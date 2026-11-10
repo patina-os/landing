@@ -97,7 +97,8 @@
   })();
 
   /* kortex's diagrams: in the hero a request runs from you through kortex to a finished
-     job; in the kortex section the model it thinks with and the things it works with.
+     job; in the kortex section the model it thinks with, and the palette that asks in plain
+     words beside the panel that shows every step.
      Examples only, nothing real runs. The dots move with SVG's own animation, paused off
      screen and for reduced motion. */
   (function () {
@@ -257,19 +258,75 @@
       { x: 336, y: 56, ico: 'globe', c: 'v', name: 'Other cloud', cap: 'thinking · a provider you pick', ms: 2600 },
       { x: 336, y: 164, ico: 'power', c: '', name: 'Off', cap: 'off until you turn it on', ms: 2400 }
     ];
-    /* the things on the PC, and three of the services of patina's defaults/services.yaml
-       (the caption names all four) */
-    var things = [
-      { x: 64, y: 44, ico: 'printer', c: 'g', name: 'Printer', cap: 'working · on your PC' },
-      { x: 64, y: 118, ico: 'gear', c: 'g', name: 'Settings', cap: 'working · on your PC' },
-      { x: 64, y: 192, ico: 'apps', c: 'g', name: 'Apps', cap: 'working · on your PC' },
-      { x: 336, y: 44, ico: 'cloud', c: 'v', name: 'Nextcloud', cap: 'working · your Nextcloud' },
-      { x: 336, y: 118, ico: 'ticket', c: 'v', name: 'Linear', cap: 'working · your Linear' },
-      { x: 336, y: 192, ico: 'code', c: 'v', name: 'GitHub', cap: 'working · your GitHub' }
-    ];
     var bSvg = document.getElementById('kx-diag-b'), cSvg = document.getElementById('kx-diag-c');
-    var b = hub(bSvg, [200, 110], models, 218), c = hub(cSvg, [200, 118], things, 230), bI = 0, cI = 0;
-    showHub(b, models, 0); showHub(c, things, 0);
+    var b = hub(bSvg, [200, 110], models, 218), bI = 0;
+    showHub(b, models, 0);
+
+    /* C: a small screen. The command palette in the middle talks as a chat and asks before
+       each change in the agent's words, with the command under them only for a step that
+       runs patina or as root (kortex's rule); the panel docked at the right edge, as
+       Windows+Shift+A opens it, shows every step. The run is the one kortex's README demo
+       recorded: PhotoCraft through patina's artcraft bundle. */
+    var said = [
+      { cap: 'a chat · it says what it does', row: ['Working · 4 s · running a command'] },
+      { cap: 'asks first · in its own words', ask: true, row: ["Allow: I'll install patina's", 'ArtCraft bundle.'], cmd: 'patina install --bundles artcraft' },
+      { cap: 'opening an app · words are enough', ask: true, row: ["Allow: Now I'll open the", 'ArtCraft Launcher.'] },
+      { cap: 'every step · in the panel, docked right', done: true, row: ['The launcher is open: pick', 'PhotoCraft there.'] }
+    ];
+    var steps = [  /* the panel's lines, the state from which each shows, and an indent */
+      [0, 'u', '› install PhotoCraft'], [0, 'th', '+ Thought'],
+      [1, 'cmd', '$ patina install'], [1, 'cmd', '--bundles artcraft', 1],
+      [2, 'out', 'done: 2 changes', 1], [2, 'cmd', '$ setsid -f'], [2, 'cmd', 'artcraft-launcher', 1],
+      [3, 'tx', 'The launcher is open:'], [3, 'tx', 'pick PhotoCraft there.']
+    ];
+    var c = (function (svg) {
+      var r = {};
+      el('rect', { x: 4, y: 4, width: 392, height: 198, rx: 10, 'class': 'kx-screen' }, svg);
+      el('rect', { x: 4, y: 188, width: 392, height: 14, 'class': 'kx-bar' }, svg);
+      el('path', { d: 'M196,199 l4,-7 l4,7 z', 'class': 'kx-tri' }, svg);
+      /* the palette */
+      el('rect', { x: 16, y: 30, width: 244, height: 118, rx: 9, 'class': 'kx-pal' }, svg);
+      el('text', { x: 30, y: 50, 'class': 'kx-t-field' }, svg, 'kortex ›');
+      el('path', { d: 'M16,60 H260', 'class': 'kx-wire' }, svg);
+      r.row = el('g', {}, svg);
+      /* the panel */
+      el('rect', { x: 270, y: 4, width: 126, height: 184, 'class': 'kx-pnl' }, svg);
+      el('text', { x: 278, y: 18, 'class': 'kx-t-pnl bar' }, svg, '▣ OC | PhotoCraft');
+      r.lines = steps.map(function (s, i) {
+        return el('text', { x: 278 + (s[3] ? 8 : 0), y: 38 + i * 14.5, 'class': 'kx-t-pnl ' + s[1] }, svg, s[2]);
+      });
+      r.cap = el('text', { x: 138, y: 222, 'text-anchor': 'middle', 'class': 'kx-t-mono' }, svg);
+      return r;
+    })(cSvg);
+    function showC(i) {
+      var s = said[i], g = c.row;
+      g.innerHTML = '';
+      if (s.ask) {
+        el('path', { d: 'M32,70 l7,12 h-14 z', 'class': 'kx-warn' }, g);
+      } else {
+        el('rect', { x: 25, y: 69, width: 14, height: 14, rx: 4, 'class': s.done ? 'kx-ok' : 'kx-node' }, g);
+        if (s.done) el('path', { d: 'M28.5,76 l2.5,2.5 4.5,-5', 'class': 'kx-ok-ico' }, g);
+        else el('path', { d: 'M29,79.5 l3,-5.5 l3,5.5 z', 'class': 'kx-tri' }, g);
+      }
+      s.row.forEach(function (t, k) { el('text', { x: 48, y: 80 + k * 15, 'class': 'kx-t-row' + (s.ask && k === 0 ? ' b' : '') }, g, t); });
+      var y = 80 + s.row.length * 15;
+      if (s.cmd) { el('text', { x: 48, y: y, 'class': 'kx-t-cmd' }, g, s.cmd); y += 15; }
+      if (s.ask) {
+        [['Allow once', 48, 58], ['Deny', 112, 34]].forEach(function (bt) {
+          el('rect', { x: bt[1], y: y - 6, width: bt[2], height: 16, rx: 4, 'class': 'kx-btn' }, g);
+          el('text', { x: bt[1] + bt[2] / 2, y: y + 5.5, 'text-anchor': 'middle', 'class': 'kx-t-btn' }, g, bt[0]);
+        });
+      } else if (s.done) {
+        el('text', { x: 48, y: y, 'class': 'kx-t-sub' }, g, 'Enter copies · 2 steps');
+      }
+      c.lines.forEach(function (l, k) {
+        l.classList.toggle('off', steps[k][0] > i);
+        l.classList.toggle('now', steps[k][0] === i && i < 3 && steps[k][1] === 'cmd');
+      });
+      c.cap.textContent = s.cap;
+    }
+    var cI = still ? 1 : 0;
+    showC(cI);
 
     /* the hero's diagram takes the layout that fits its card; each part runs while on screen */
     var seen = { a: false, bc: false }, layout = null;
@@ -303,7 +360,7 @@
       setTimeout(function () { showA(true); }, 1300);
     }, function () { return 4400; });
     every('bc', function () { bI = (bI + 1) % models.length; showHub(b, models, bI); }, function () { return models[bI].ms; });
-    every('bc', function () { cI = (cI + 1) % things.length; showHub(c, things, cI); }, function () { return 2600; });
+    every('bc', function () { cI = (cI + 1) % said.length; showC(cI); }, function () { return cI === 3 ? 3600 : 2800; });
     [['a', host], ['bc', document.querySelector('.kx-bento')]].forEach(function (p) {
       if ('IntersectionObserver' in window) {
         new IntersectionObserver(function (e) { seen[p[0]] = e[0].isIntersecting; update(); }, { threshold: .1 }).observe(p[1]);
