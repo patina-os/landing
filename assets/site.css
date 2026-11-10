@@ -433,6 +433,26 @@ code, .mono { font-family: var(--f-mono); }
 .kx-t-sub { font: 400 11.5px var(--f-body); fill: var(--a-muted); }
 .kx-ok { fill: var(--a-mint); }
 .kx-ok-ico { fill: none; stroke: var(--a-green); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+/* C: the screen, the palette and the docked panel */
+.kx-screen { fill: var(--a-bg); stroke: var(--a-line2); stroke-width: 1.2; }
+.kx-bar { fill: var(--a-panel); }
+.kx-pal { fill: #fff; stroke: var(--a-line2); stroke-width: 1.2; filter: drop-shadow(0 6px 10px rgba(42, 38, 56, .12)); }
+.kx-pnl { fill: var(--a-ink); }
+.kx-warn { fill: #e0a100; }
+.kx-btn { fill: var(--a-panel); stroke: var(--a-line2); }
+.kx-t-field { font: 600 11px var(--f-mono); fill: var(--a-violet); }
+.kx-t-row { font: 400 11.5px var(--f-body); fill: var(--a-ink); }
+.kx-t-row.b { font-weight: 600; }
+.kx-t-cmd { font: 500 9.5px var(--f-mono); fill: var(--a-violet); }
+.kx-t-btn { font: 600 9px var(--f-body); fill: var(--a-ink); }
+.kx-t-pnl { font: 400 8.2px var(--f-mono); fill: #d9d4e8; transition: opacity .4s; }
+.kx-t-pnl.bar { fill: #8f88a8; }
+.kx-t-pnl.u { fill: #fff; }
+.kx-t-pnl.th { fill: #f2a65a; }
+.kx-t-pnl.cmd { fill: var(--brand-lav); }
+.kx-t-pnl.out { fill: #8f88a8; }
+.kx-t-pnl.now { fill: #3cff9d; }
+.kx-t-pnl.off { opacity: 0; }
 .kx-pkt { fill: var(--a-ink); }
 .kx-pkt.g { fill: var(--a-green); }
 .kx-pkt.v { fill: var(--a-violet); }

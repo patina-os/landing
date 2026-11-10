@@ -10,7 +10,7 @@ Google Fonts. Everything it loads is in this repository.
 ```text
 index.html            the page
 assets/site.css       aurora's light palette, the layout, the self-hosted fonts
-assets/site.js        kortex's diagrams, the contour lines and the rings around the wordmark (nothing talks to a server)
+assets/site.js        kortex's diagrams (the hero's, the models, the palette beside the panel), the contour lines and the rings around the wordmark (nothing talks to a server)
 assets/fonts/         Sora, Source Sans 3 and JetBrains Mono (latin, latin-ext), with their OFL licences
 assets/wordmark-*.svg the wordmark from patina's branding/export/, light and dark
 assets/kortex-*.svg   kortex's diagrams as animated SVGs, light and dark, for patina's README
@@ -58,12 +58,17 @@ https://patina-os.github.io/landing/.
 - kortex's diagrams are examples in `assets/site.js`; nothing real runs. The hero's
   requests are what people ask an assistant for, after `kortex ›`, as the command palette
   shows them once Windows+A opened it on kortex (the `ask` key in patina's
-  `defaults/keybindings.yaml`); the kortex section names that key. The models follow patina's
-  `defaults/settings.yaml` (`ai.local`, `ai.cloud`), the services its `defaults/services.yaml`.
-- `kortex-ask-*.svg` (the hero's diagram) and `kortex-things-*.svg` (what kortex works
-  with) are the same diagrams drawn as SVGs that animate without a script, with the fonts
-  inside, in aurora's light and dark palettes, so patina's README can show them. Draw them
-  again when the diagrams change.
+  `defaults/keybindings.yaml`); the kortex section names that key and Windows+Shift+A (the
+  `agent` key), which docks kortex's panel. The models follow patina's
+  `defaults/settings.yaml` (`ai.local`, `ai.cloud`), the services named in the intro its
+  `defaults/services.yaml`. "See every step" draws kortex 0.7's palette and panel: rows
+  that ask in the agent's words, the command under them only for a step that runs
+  `patina` or as root (kortex's rule), and the run kortex's README demo recorded.
+- `kortex-ask-*.svg` (the hero's diagram) is the same diagram drawn as an SVG that
+  animates without a script, with the fonts inside, in aurora's light and dark palettes,
+  so patina's README can show it. Draw it again when the diagram changes.
+  `kortex-things-*.svg` (what kortex works with) is drawn the same way; its card left the
+  page in November 2026 for "See every step", and patina's README still shows it.
 
 ## Licence
 
