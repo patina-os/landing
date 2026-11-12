@@ -266,7 +266,6 @@ code, .mono { font-family: var(--f-mono); }
 .a-office { margin-top: 48px; border: 1px solid var(--a-line); background: #fff; border-radius: 16px; padding: 28px clamp(18px, 3vw, 32px) 32px; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 32px; align-items: start; }
 .a-office-text { display: flex; flex-direction: column; gap: 12px; }
 .a-office h3 { font: 700 1.35rem/1.2 var(--f-display); color: var(--a-ink); letter-spacing: -.015em; }
-.a-office-note { background: var(--a-mint); border-radius: 10px; padding: 12px 14px; color: var(--a-ink); font-size: 16px; }
 .a-office-jobs { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
 .a-office-jobs li { background: var(--a-bg); border: 1px solid var(--a-line); border-radius: 10px; padding: 12px 14px; display: flex; flex-direction: column; gap: 2px; min-width: 0; }
 .a-office-jobs b { font: 700 15px/1.25 var(--f-display); color: var(--a-ink); }
