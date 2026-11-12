@@ -308,7 +308,7 @@ code, .mono { font-family: var(--f-mono); }
 .a-dl li code { font-size: 13.5px; }
 .a-dl .btn-row { margin-top: auto; }
 .a-dl-links { font: 400 13px/1.4 var(--f-mono); color: var(--a-muted); }
-.a-dl-links a:hover, .a-try-note a:hover, .a-arm-mac a:hover { color: var(--a-violet); }
+.a-dl-links a:hover, .a-try-note a:hover, .a-arm a:hover, .a-arm-mac a:hover { color: var(--a-violet); }
 .a-try-note { margin-top: 18px; color: var(--a-muted); font-size: 15px; max-width: 52em; }
 @media (max-width: 760px) { .a-try { grid-template-columns: 1fr; } }
 
