@@ -52,7 +52,8 @@ https://patina-os.github.io/landing/.
 - The ARM rows and the Apple Silicon note follow patina's `docs/hardware.md`, the roadmap
   steps its `docs/roadmap.md`.
 - The downloads point at the latest releases by file name:
-  `patina-amd64.hybrid.iso` and `SHA256SUMS` of patina,
+  `patina-amd64.hybrid.iso` and `SHA256SUMS` of patina (and, from the ARM section's
+  Snapdragon card, `patina-arm64.hybrid.iso`, in the release since `v0.1.0-alpha.15`),
   `TryPatina.exe` and `TryPatina.exe.sha256` of
   [win-emulator](https://github.com/patina-os/win-emulator). Change them when a name changes.
 - kortex's diagrams are examples in `assets/site.js`; nothing real runs. The hero's
