@@ -293,7 +293,7 @@ code, .mono { font-family: var(--f-mono); }
 .a-arm li.next { border-color: var(--a-green); }
 .a-arm h3 { font: 700 1.1rem/1.25 var(--f-display); color: var(--a-ink); letter-spacing: -.01em; }
 .a-arm p { font-size: 15.5px; }
-.a-arm-mac { margin-top: 18px; background: var(--a-mint); border-radius: 10px; padding: 12px 14px; color: var(--a-ink); font-size: 16px; max-width: 52em; }
+.a-arm-mac { margin-top: 18px; background: var(--a-mint); border-radius: 10px; padding: 12px 14px; color: var(--a-ink); font-size: 16px; }
 @media (max-width: 1000px) { .a-arm { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
 @media (max-width: 640px) { .a-arm { grid-template-columns: 1fr; } }
 
